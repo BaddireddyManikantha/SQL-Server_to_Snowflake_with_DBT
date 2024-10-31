@@ -1,5 +1,5 @@
 models:
-  - name: customer_revnue
+  - name: customer_revenue_curated
     columns:
       - name: customer_name
         tests:

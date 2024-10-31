@@ -1,2 +1,2 @@
-select * from cust_revenue
+select * from customer_revenue
 where revenue<0
