@@ -24,7 +24,7 @@
 			"value": ""
 		},
 		"linkedServiceblobLS_properties_typeProperties_sasToken_secretName": {
-			"value": "sas-token"
+			"value": "sas-tokens"
 		},
 		"containerUri": {
 			"value": ""

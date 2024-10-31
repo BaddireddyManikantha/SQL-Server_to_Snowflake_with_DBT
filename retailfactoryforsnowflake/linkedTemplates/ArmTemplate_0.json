@@ -33,7 +33,7 @@
 		},
 		"linkedServiceblobLS_properties_typeProperties_sasToken_secretName": {
 			"type": "string",
-			"defaultValue": "sas-token"
+			"defaultValue": "sas-tokens"
 		}
 	},
 	"variables": {
