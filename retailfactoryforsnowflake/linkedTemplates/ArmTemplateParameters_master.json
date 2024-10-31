@@ -5,12 +5,6 @@
 		"factoryName": {
 			"value": "retailfactoryforsnowflake"
 		},
-		"AzureDataLakeStorageLS_accountKey": {
-			"value": ""
-		},
-		"AzureDataLakeStorageLS_properties_typeProperties_url": {
-			"value": "https://retailgen2.dfs.core.windows.net/"
-		},
 		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
 			"value": "https://retailsecrets.vault.azure.net/"
 		},

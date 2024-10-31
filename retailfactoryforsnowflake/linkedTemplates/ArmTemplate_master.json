@@ -7,14 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "retailfactoryforsnowflake"
 		},
-		"AzureDataLakeStorageLS_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
-		},
-		"AzureDataLakeStorageLS_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://retailgen2.dfs.core.windows.net/"
-		},
 		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://retailsecrets.vault.azure.net/"
@@ -69,12 +61,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"AzureDataLakeStorageLS_accountKey": {
-						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
-					},
-					"AzureDataLakeStorageLS_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
 					},
 					"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVaultLS_properties_typeProperties_baseUrl')]"

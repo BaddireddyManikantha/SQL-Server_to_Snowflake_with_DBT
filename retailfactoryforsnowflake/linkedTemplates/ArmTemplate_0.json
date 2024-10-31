@@ -7,14 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "retailfactoryforsnowflake"
 		},
-		"AzureDataLakeStorageLS_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
-		},
-		"AzureDataLakeStorageLS_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://retailgen2.dfs.core.windows.net/"
-		},
 		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://retailsecrets.vault.azure.net/"
@@ -48,24 +40,6 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorageLS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "to store intermediate data",
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureKeyVaultLS')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -337,7 +311,7 @@
 										"sink": {
 											"type": "SnowflakeV2Sink",
 											"preCopyScript": {
-												"value": "@concat('truncate table',item().name)",
+												"value": "@concat('truncate table retail_sch.',item().name)",
 												"type": "Expression"
 											},
 											"importSettings": {
