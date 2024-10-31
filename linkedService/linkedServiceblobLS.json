@@ -5,14 +5,14 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"sasUri": "https://snowflakeretailstage.blob.core.windows.net/",
+			"sasUri": "https://blobforssqlservenowflake.blob.core.windows.net/",
 			"sasToken": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "AzureKeyVaultLS",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "sas-token"
+				"secretName": "sas-tokens"
 			}
 		}
 	}
