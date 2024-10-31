@@ -41,8 +41,8 @@ models:
     example:
       +materialized: table
     customer_revenue:
-      database: retail
-      schema: dbt_sch
+      +database: retail
+      +schema: dbt_sch
     customer_revenue_curated:
-      database: retail
-      schema: dbt_sch
+      +database: retail
+      +schema: dbt_sch
