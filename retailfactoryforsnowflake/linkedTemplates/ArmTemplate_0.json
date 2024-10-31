@@ -393,7 +393,7 @@
 					"recurrence": {
 						"frequency": "Day",
 						"interval": 1,
-						"startTime": "2024-10-31T20:50:00",
+						"startTime": "2024-11-01T09:00:00",
 						"timeZone": "India Standard Time",
 						"schedule": {}
 					}
