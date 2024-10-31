@@ -1,0 +1,105 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "retailfactoryforsnowflake"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retailgen2.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://retailsecrets.vault.azure.net/"
+		},
+		"SnowflakeLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "retail"
+		},
+		"SqlServerLS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "MANI\\SQLEXPRESS"
+		},
+		"SqlServerLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "retail"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mani"
+		},
+		"linkedServiceblobLS_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'linkedServiceblobLS'"
+		},
+		"linkedServiceblobLS_properties_typeProperties_sasToken_secretName": {
+			"type": "string",
+			"defaultValue": "sas-token"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "retailfactoryforsnowflake_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorageLS_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
+					},
+					"AzureDataLakeStorageLS_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
+					},
+					"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVaultLS_properties_typeProperties_baseUrl')]"
+					},
+					"SnowflakeLS_properties_typeProperties_database": {
+						"value": "[parameters('SnowflakeLS_properties_typeProperties_database')]"
+					},
+					"SqlServerLS_properties_typeProperties_server": {
+						"value": "[parameters('SqlServerLS_properties_typeProperties_server')]"
+					},
+					"SqlServerLS_properties_typeProperties_database": {
+						"value": "[parameters('SqlServerLS_properties_typeProperties_database')]"
+					},
+					"SqlServerLS_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerLS_properties_typeProperties_userName')]"
+					},
+					"linkedServiceblobLS_sasUri": {
+						"value": "[parameters('linkedServiceblobLS_sasUri')]"
+					},
+					"linkedServiceblobLS_properties_typeProperties_sasToken_secretName": {
+						"value": "[parameters('linkedServiceblobLS_properties_typeProperties_sasToken_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

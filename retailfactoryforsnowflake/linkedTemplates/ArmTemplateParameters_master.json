@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "retailfactoryforsnowflake"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://retailgen2.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"value": "https://retailsecrets.vault.azure.net/"
+		},
+		"SnowflakeLS_properties_typeProperties_database": {
+			"value": "retail"
+		},
+		"SqlServerLS_properties_typeProperties_server": {
+			"value": "MANI\\SQLEXPRESS"
+		},
+		"SqlServerLS_properties_typeProperties_database": {
+			"value": "retail"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"value": "mani"
+		},
+		"linkedServiceblobLS_sasUri": {
+			"value": ""
+		},
+		"linkedServiceblobLS_properties_typeProperties_sasToken_secretName": {
+			"value": "sas-token"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
