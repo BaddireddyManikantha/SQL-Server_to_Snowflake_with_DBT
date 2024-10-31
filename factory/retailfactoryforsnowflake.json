@@ -1,0 +1,9 @@
+{
+	"name": "retailfactoryforsnowflake",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d5866e7e-bf7f-48e5-ac1e-888c71163f0a",
+		"tenantId": "7016ddf1-3b4e-49ba-ac65-7f43294f82f5"
+	}
+}

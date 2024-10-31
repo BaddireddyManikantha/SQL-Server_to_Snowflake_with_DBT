@@ -1,0 +1,7 @@
+{
+	"name": "selfhostIR",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "to connect with sql server"
+	}
+}

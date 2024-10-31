@@ -1,0 +1,24 @@
+{
+	"name": "SnowflakeLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "target",
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "bb25839.central-india.azure",
+			"user": "mani",
+			"database": "retail",
+			"warehouse": "compute_wh",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "snowflake-pwd"
+			}
+		}
+	}
+}
