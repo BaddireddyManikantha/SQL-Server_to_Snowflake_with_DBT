@@ -40,5 +40,5 @@ models:
     # Applies to all files under models/example/
     database: retail_sch
     schema: dbt_sch
-
-    +materialized: table
+    example:
+            +materialized: table
