@@ -67,7 +67,7 @@
 								"sink": {
 									"type": "SnowflakeV2Sink",
 									"preCopyScript": {
-										"value": "@concat('truncate table',item().name)",
+										"value": "@concat('truncate table retail_sch.',item().name)",
 										"type": "Expression"
 									},
 									"importSettings": {
