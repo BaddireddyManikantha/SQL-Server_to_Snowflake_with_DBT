@@ -1,5 +1,5 @@
 {
-	"name": "triggerAt9AMEveryday",
+	"name": "triggerAt10-30AMEveryday",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
@@ -16,7 +16,7 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 1,
-				"startTime": "2024-11-01T09:30:00",
+				"startTime": "2024-11-01T10:30:00",
 				"timeZone": "India Standard Time"
 			}
 		}
